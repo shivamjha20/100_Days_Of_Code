@@ -1,0 +1,1 @@
+print("Jay Shri Ram\Har Har Mahadev") # Use of Escape Sequence(\)
