@@ -10,7 +10,7 @@ str= "Hello!", "Bye"
 list1=[8,2.3,[-4,5],["apple","banana"]]
 tuple1=(("Parrot","Crow"),("Lion","Elephant"))
 dict1={"name":"Shivam","age":20,"canVote":True}
-print(a,b,c,d,int,float,complex,bool,str,list1,tuple1,dict1, sep="--")
+print(a,b,c,d,int,float,complex,bool,str,list1,tuple1,dict1, sep="--\n")
 '''
 What is variable?
 variable is like a container who holds data,
