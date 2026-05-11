@@ -2,7 +2,15 @@ a=1
 b=True
 c="Harry"
 d=None
-print(a,b,c,d, sep="--")
+int= 3,-8,0
+float= 7.349,-9.0,0.0000001
+complex= 6+2j
+bool=True
+str= "Hello!", "Bye"
+list1=[8,2.3,[-4,5],["apple","banana"]]
+tuple1=(("Parrot","Crow"),("Lion","Elephant"))
+dict1={"name":"Shivam","age":20,"canVote":True}
+print(a,b,c,d,int,float,complex,bool,str,list1,tuple1,dict1, sep="--")
 '''
 What is variable?
 variable is like a container who holds data,
