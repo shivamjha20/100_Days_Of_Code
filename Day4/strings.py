@@ -20,4 +20,8 @@ print(a)
 # Accessing characters of a string
 print("Accessing characters of a string")
 print(name[0])
-print(name[1])
+print(name[1],"\n")
+
+# Looping through the string
+for character in name:
+    print(character)
