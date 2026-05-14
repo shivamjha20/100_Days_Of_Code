@@ -2,6 +2,9 @@
 '''Python provides a set of built in methods that we can use
 to ulter and modify the strings'''
 
-# upper():- The upper() methods a string to upper class.
-name="shivam"
+# upper():- The upper() method converts a string to upper case.
+name="ShIvam"
 print(name.upper())
+
+# lower():- The lower() method converts a string to lower case.
+print(name.lower())
