@@ -18,3 +18,10 @@ print(name[:5]) # Slicing from start
 print(name[5:]) # Slicing till end
 print(name[2:5]) # Slicing in between
 print(name[-3:]) # Slicing using negative index
+
+#Loop through string
+'''Strings are arrays and arrays are iterable. Thus we can loop
+through strings'''
+alphabets="ABCDE"
+for i in alphabets:
+    print(i)
