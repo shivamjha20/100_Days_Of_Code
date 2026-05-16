@@ -8,3 +8,4 @@ print(name.upper())
 
 # lower():- The lower() method converts a string to lower case.
 print(name.lower())
+
