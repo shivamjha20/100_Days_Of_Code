@@ -6,3 +6,6 @@ print(name.strip())
 '''
 a="OP!!!"
 print(a.rstrip("!"))
+'''replace():- The replace() method replaces all occurances
+of a string with another string'''
+print(a.replace("!","@"))
