@@ -13,3 +13,7 @@ str3="Welcome to the console"
 print(str3.center(50))
 print(str3.center(50,"."))
 ''''''
+''''count():- The count() method returns the number of times the 
+given value has occured within the given string.'''
+str4="London"
+print(str4.count("o"))
