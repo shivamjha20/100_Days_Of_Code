@@ -11,3 +11,5 @@ print(str2.capitalize())
 as per the parameters given by the user.'''
 str3="Welcome to the console"
 print(str3.center(50))
+print(str3.center(50,"."))
+''''''
