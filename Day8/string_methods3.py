@@ -6,3 +6,8 @@ str="hello"
 print(str.capitalize())
 str2="hello World"
 print(str2.capitalize())
+
+'''centre:- The centre() method align the string to the centre
+as per the parameters given by the user.'''
+str3="Welcome to the console"
+print(str3.center(50))
