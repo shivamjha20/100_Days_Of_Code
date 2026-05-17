@@ -17,3 +17,10 @@ print(str3.center(50,"."))
 given value has occured within the given string.'''
 str4="London"
 print(str4.count("o"))
+'''endwith():- The endwith() methods checks if the string ends
+with the given value. If yes then return  true, else return false.
+We can even also check for a value in between the string by
+providing start and end index positions'''
+str5="hey!!!"
+print(str5.endswith("!!!!"))
+print(str5.endswith("!",3,6))
