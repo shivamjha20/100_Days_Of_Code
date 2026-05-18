@@ -11,4 +11,4 @@ If the given value is absent from the string then raise an
 exception'''
 str2="He is a good teacher"
 print(str2.index("a"))
-print(str2.index("to"))#Similar to find() but if value is absent it raises exception.
+#Similar to find() but if value is absent it raises exception.
