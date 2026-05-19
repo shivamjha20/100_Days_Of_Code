@@ -11,3 +11,11 @@ print(str2.isalpha())
 the characters in the string are lower case.'''
 str3="hello world"
 print(str3.islower())
+
+'''isprintable():- The isprintable() method returns true if 
+all the values within the given string are printable, if not
+then return false.'''
+str4="Happy Diwali All"
+str5="Happy Dusherra\n"
+print(str4.isprintable())
+print(str5.isprintable())
