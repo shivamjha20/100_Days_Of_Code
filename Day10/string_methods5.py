@@ -6,3 +6,8 @@ str1="welcome"
 str2="welcome!!"
 print(str1.isalpha())
 print(str2.isalpha())
+
+'''islower():- The islower() method returns true if all 
+the characters in the string are lower case.'''
+str3="hello world"
+print(str3.islower())
