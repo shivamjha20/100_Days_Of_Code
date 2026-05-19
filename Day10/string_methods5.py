@@ -19,3 +19,11 @@ str4="Happy Diwali All"
 str5="Happy Dusherra\n"
 print(str4.isprintable())
 print(str5.isprintable())
+
+'''isspace():- The isspace() methods return true only and
+only if the strings contains white space , else return
+false'''
+str6="      "       # Using Spacebar 
+str7="          "   # Using Tab
+print(str6.isspace())
+print(str7.isspace())
