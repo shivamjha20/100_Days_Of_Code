@@ -21,3 +21,16 @@ print(str3.isupper())        # False (no letters at all)
 
 str4 = "WELCOME123"
 print(str4.isupper())        # True (numbers are ignored, only letters matter)
+
+'''startswith():- The startswith() method checks if a string 
+begins with the specified prefix. It returns True if it does,
+ otherwise False.'''
+
+str1 = "Python Programming"
+print(str1.startswith("Python"))     # True
+
+str2 = "Python Programming"
+print(str2.startswith("program"))    # False
+
+str3 = "Hello World"
+print(str3.startswith("He"))         # True
