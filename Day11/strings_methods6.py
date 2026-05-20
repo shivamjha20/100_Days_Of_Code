@@ -34,3 +34,15 @@ print(str2.startswith("program"))    # False
 
 str3 = "Hello World"
 print(str3.startswith("He"))         # True
+
+'''swapcase():- The swapcase() method converts uppercase 
+letters to lowercase and lowercase letters to uppercase.
+It returns a new string with the swapped cases.'''
+str1 = "Hello World"
+print(str1.swapcase())     # hELLO wORLD
+
+str2 = "PYTHON"
+print(str2.swapcase())     # python
+
+str3 = "javaSCRIPT"
+print(str3.swapcase())     # JAVAscript
