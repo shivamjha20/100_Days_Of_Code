@@ -46,3 +46,18 @@ print(str2.swapcase())     # python
 
 str3 = "javaSCRIPT"
 print(str3.swapcase())     # JAVAscript
+
+'''title():- The title() method returns a new string where 
+the first character of each word is capitalized and the rest 
+are lowercase. It’s often used to format text into “title case.”'''
+str1 = "hello world"
+print(str1.title())        # Hello World
+
+str2 = "python programming language"
+print(str2.title())        # Python Programming Language
+
+str3 = "123abc is fun"
+print(str3.title())        # 123Abc Is Fun
+
+str4 = "WELCOME to the jungle"
+print(str4.title())        # Welcome To The Jungle
