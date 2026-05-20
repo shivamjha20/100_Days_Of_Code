@@ -6,3 +6,18 @@ print(str1.istitle())   # Output: True
 
 str2 = "To kill a Mocking bird"
 print(str2.istitle())   # Output: False
+
+'''isupper():- The isupper() method returns True if all
+characters in the string are uppercase letters.
+If there are any lowercase letters, it returns False.'''
+str1 = "HELLO WORLD"
+print(str1.isupper())        # True
+
+str2 = "Hello World"
+print(str2.isupper())        # False
+
+str3 = "12345!"
+print(str3.isupper())        # False (no letters at all)
+
+str4 = "WELCOME123"
+print(str4.isupper())        # True (numbers are ignored, only letters matter)
