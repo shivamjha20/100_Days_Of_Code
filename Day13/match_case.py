@@ -10,3 +10,15 @@ match num:
         print("Square Root:", num ** 0.5)
     case _:
         print("Invalid choice")
+
+command = "start"
+
+match command:
+    case "start":
+        print("System is starting...")
+    case "stop":
+        print("System is stopping...")
+    case "restart":
+        print("System is restarting...")
+    case _:
+        print("Unknown command")
