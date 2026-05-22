@@ -22,3 +22,11 @@ while x < 5:
     if x == 3:
         continue   # skips printing 3
     print(x)
+
+'''Key points:
+
+while condition: → keeps looping until condition becomes False.
+
+break → exits the loop immediately.
+
+continue → skips the current iteration and moves to the next.'''
