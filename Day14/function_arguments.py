@@ -11,3 +11,9 @@ def greet(name, age):
 
 greet(age=24, name="Shivam")   # Hello Shivam, you are 24 years old.
 
+#Default Arguments:-Provide default values if not specified.
+def greet(name="Guest"):
+    print("Hello", name)
+
+greet("Shivam")   # Hello Shivam
+greet()           # Hello Guest
