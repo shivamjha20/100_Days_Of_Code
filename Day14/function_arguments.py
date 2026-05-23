@@ -3,3 +3,11 @@ def greet(name, age):
     print(f"Hello {name}, you are {age} years old.")
 
 greet("Shivam", 24)   # Hello Shivam, you are 24 years old.
+
+'''Keyword Arguments:-Passed using the parameter name,
+ order doesn’t matter.'''
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet(age=24, name="Shivam")   # Hello Shivam, you are 24 years old.
+
