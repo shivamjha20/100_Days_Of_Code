@@ -24,3 +24,11 @@ def add_numbers(*args):
     print(sum(args))
 
 add_numbers(1, 2, 3, 4)   # 10
+
+'''Keyword Variable-Length Arguments (**kwargs):-
+Accepts multiple keyword arguments as a dictionary.'''
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Shivam", age=21, city="Jharkhand")
