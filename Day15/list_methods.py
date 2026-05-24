@@ -6,3 +6,7 @@ print(fruits)   # ['apple', 'banana', 'cherry']
 #insert() → Adds an item at a specific position.
 fruits.insert(1, "mango")
 print(fruits)   # ['apple', 'mango', 'banana', 'cherry']
+
+#remove() → Removes the first occurrence of an item.
+fruits.remove("banana")
+print(fruits)   # ['apple', 'mango', 'cherry']
