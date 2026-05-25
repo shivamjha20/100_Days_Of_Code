@@ -11,3 +11,7 @@ print(fruits)   # []
 numbers = [3, 1, 4, 2]
 numbers.sort()
 print(numbers)   # [1, 2, 3, 4]
+
+#reverse() → Reverses the list order.
+numbers.reverse()
+print(numbers)   # [4, 3, 2, 1]
