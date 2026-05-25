@@ -2,3 +2,8 @@
 fruits = ["apple", "banana"]
 fruits.pop()
 print(fruits)   # ['apple', 'mango']
+
+#clear() → Removes all items from the list.
+fruits.clear()
+print(fruits)   # []
+
