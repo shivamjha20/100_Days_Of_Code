@@ -22,3 +22,9 @@ print(nums.index(20))   # 1
 
 #count() → Counts occurrences of an item.
 print(nums.count(20))   # 2
+
+#extend() → Adds elements from another list.
+a = [1, 2]
+b = [3, 4]
+a.extend(b)
+print(a)   # [1, 2, 3, 4]
