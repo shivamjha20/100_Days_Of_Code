@@ -19,3 +19,6 @@ print(numbers)   # [4, 3, 2, 1]
 #index() → Returns the index of the first occurrence.
 nums = [10, 20, 30, 20]
 print(nums.index(20))   # 1
+
+#count() → Counts occurrences of an item.
+print(nums.count(20))   # 2
