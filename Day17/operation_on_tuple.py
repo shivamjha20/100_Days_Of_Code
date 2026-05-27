@@ -23,3 +23,8 @@ print(40 in tup)    # False
 tup = ("apple", "banana", "cherry")
 for item in tup:
     print(item)
+
+#Tuple Methods:-Only two built-in methods:
+tup = (1, 2, 2, 3)
+print(tup.count(2))   # 2
+print(tup.index(3))   # 3
