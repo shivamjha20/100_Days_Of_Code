@@ -18,3 +18,8 @@ print(tup)          # ('Hi', 'Hi', 'Hi')
 tup = (10, 20, 30)
 print(20 in tup)    # True
 print(40 in tup)    # False
+
+#Iteration:-Loop through tuple elements.
+tup = ("apple", "banana", "cherry")
+for item in tup:
+    print(item)
