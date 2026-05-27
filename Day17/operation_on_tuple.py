@@ -28,3 +28,9 @@ for item in tup:
 tup = (1, 2, 2, 3)
 print(tup.count(2))   # 2
 print(tup.index(3))   # 3
+
+'''Tuple Packing & Unpacking:-Pack values into a tuple,
+ unpack into variables.'''
+person = ("Shivam", 24, "India")
+name, age, country = person
+print(name, age, country)   # Shivam 24 India
