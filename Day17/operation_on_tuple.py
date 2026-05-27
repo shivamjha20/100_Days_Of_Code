@@ -13,3 +13,8 @@ print(result)       # (1, 2, 3, 4, 5)
 #Repetition:-Repeat elements using *.
 tup = ("Hi",) * 3
 print(tup)          # ('Hi', 'Hi', 'Hi')
+
+#Membership Test:-Check if an element exists with in.
+tup = (10, 20, 30)
+print(20 in tup)    # True
+print(40 in tup)    # False
