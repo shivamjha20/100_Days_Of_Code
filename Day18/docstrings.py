@@ -38,3 +38,15 @@ class Person:
 This module demonstrates the use of docstrings
 in Python for functions, classes, and modules.
 """
+
+'''
+ Key points:
+
+Docstrings are not comments — they are stored at runtime and
+ can be retrieved.
+
+They are used by tools like help(), IDEs, and documentation
+ generators.
+
+Best practice: always write docstrings for functions, classes,
+ and modules.'''
