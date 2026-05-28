@@ -31,3 +31,8 @@ a = {a}
 b = {b}
 Sum = {a + b}
 """)
+'''👉 Key points:
+Use f"..." and put variables or expressions inside {}.
+Supports formatting (like decimals, alignment, padding).
+Cleaner and faster than older methods like str.format() or
+ % formatting.'''
