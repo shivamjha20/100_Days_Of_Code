@@ -31,3 +31,13 @@ print(set1 | set2)   # Union → {1, 2, 3, 4, 5, 6}
 print(set1 & set2)   # Intersection → {3, 4}
 print(set1 - set2)   # Difference → {1, 2}
 print(set1 ^ set2)   # Symmetric Difference → {1, 2, 5, 6}
+
+'''
+Key points:
+
+->Sets automatically remove duplicates.
+
+->Elements must be immutable (e.g., numbers, strings, tuples).
+
+->Sets are great for fast membership tests and mathematical 
+operations.'''
