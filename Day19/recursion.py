@@ -35,3 +35,13 @@ def sum_list(lst):
         return lst[0] + sum_list(lst[1:])
 
 print(sum_list([1, 2, 3, 4]))   # 10
+
+'''
+Key points:
+
+->Always define a base case to avoid infinite recursion.
+
+->Recursion can be elegant but sometimes less efficient than loops
+(due to repeated calls and memory usage).
+
+->Python has a recursion depth limit (default ~1000 calls).'''
