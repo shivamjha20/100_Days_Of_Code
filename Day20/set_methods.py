@@ -12,3 +12,8 @@ print(s)   # {1, 2, 3, 4, 5}
 s = {1, 2, 3}
 s.remove(2)
 print(s)   # {1, 3}
+
+#discard() → Removes an element (no error if not found).
+s = {1, 2, 3}
+s.discard(4)   # no error
+print(s)       # {1, 2, 3}
