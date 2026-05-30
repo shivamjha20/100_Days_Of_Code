@@ -27,3 +27,8 @@ print(s)         # remaining elements
 s = {1, 2, 3}
 s.clear()
 print(s)   # set()
+
+#copy() → Returns a shallow copy.
+s = {1, 2, 3}
+t = s.copy()
+print(t)   # {1, 2, 3}
