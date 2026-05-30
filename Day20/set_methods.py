@@ -22,3 +22,8 @@ print(s)       # {1, 2, 3}
 s = {10, 20, 30}
 print(s.pop())   # could be 10, 20, or 30
 print(s)         # remaining elements
+
+#clear() → Removes all elements.
+s = {1, 2, 3}
+s.clear()
+print(s)   # set()
