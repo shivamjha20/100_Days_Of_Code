@@ -32,3 +32,8 @@ print(s)   # set()
 s = {1, 2, 3}
 t = s.copy()
 print(t)   # {1, 2, 3}
+
+#union() → Returns all elements from both sets.
+a = {1, 2}
+b = {2, 3}
+print(a.union(b))   # {1, 2, 3}
