@@ -13,3 +13,11 @@ a = {1, 2, 3}
 b = {3, 4}
 print(a.symmetric_difference(b))   # {1, 2, 4}
 
+'''issubset():-
+->Checks if all elements of one set are present in another set.
+->Returns True if the set is a subset, otherwise False.'''
+a = {1, 2}
+b = {1, 2, 3}
+print(a.issubset(b))   # True
+print(b.issubset(a))   # False
+
