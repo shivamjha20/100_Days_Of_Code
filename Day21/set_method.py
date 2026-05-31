@@ -21,3 +21,11 @@ b = {1, 2, 3}
 print(a.issubset(b))   # True
 print(b.issubset(a))   # False
 
+'''issuperset():-
+->Checks if a set contains all elements of another set.
+->Returns True if the set is a superset, otherwise False.'''
+a = {1, 2}
+b = {1, 2, 3}
+print(b.issuperset(a))   # True
+print(a.issuperset(b))   # False
+
