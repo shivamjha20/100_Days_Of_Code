@@ -12,3 +12,7 @@ print(student.items())   # dict_items([('name', 'Shivam'), ('age', 21)])
 print(student.get("name"))   # Shivam
 print(student.get("city", "Not Found"))   # Not Found
 
+#update() → Adds or updates key-value pairs.
+student.update({"city": "Jharkhand", "age": 22})
+print(student)   # {'name': 'Shivam', 'age': 22, 'city': 'Jharkhand'}
+
