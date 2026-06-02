@@ -6,3 +6,7 @@ print(student)   # {'name': 'Shivam', 'age': 22}
 #popitem() → Removes and returns the last inserted key-value pair.
 print(student.popitem())   # ('age', 22)
 print(student)   # {'name': 'Shivam'}
+
+#clear() → Removes all items.
+student.clear()
+print(student)   # {}
