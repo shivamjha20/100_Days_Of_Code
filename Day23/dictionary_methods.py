@@ -15,3 +15,9 @@ print(student)   # {}
 student = {"name": "Shivam", "age": 23}
 new_student = student.copy()
 print(new_student)   # {'name': 'Shivam', 'age': 23}
+
+'''fromkeys() → Creates a dictionary from a list of keys with a
+default value'''
+keys = ["a", "b", "c"]
+new_dict = dict.fromkeys(keys, 0)
+print(new_dict)   # {'a': 0, 'b': 0, 'c': 0}
