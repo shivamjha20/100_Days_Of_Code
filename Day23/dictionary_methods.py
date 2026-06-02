@@ -10,3 +10,8 @@ print(student)   # {'name': 'Shivam'}
 #clear() → Removes all items.
 student.clear()
 print(student)   # {}
+
+#copy() → Returns a shallow copy.
+student = {"name": "Shivam", "age": 23}
+new_student = student.copy()
+print(new_student)   # {'name': 'Shivam', 'age': 23}
