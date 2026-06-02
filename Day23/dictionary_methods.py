@@ -21,3 +21,10 @@ default value'''
 keys = ["a", "b", "c"]
 new_dict = dict.fromkeys(keys, 0)
 print(new_dict)   # {'a': 0, 'b': 0, 'c': 0}
+
+'''setdefault() → Returns value of a key; if not present, inserts
+ it with a default.'''
+
+student = {"name": "Shivam"}
+print(student.setdefault("age", 21))   # 21
+print(student)   # {'name': 'Shivam', 'age': 21}
