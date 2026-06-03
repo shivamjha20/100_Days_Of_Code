@@ -42,3 +42,10 @@ except Exception as e:
 finally:
     f.close()
     print("File closed safely.")
+
+'''Key Points
+->try → code that might cause an error.
+->except → handles the error.
+->else → runs if no error occurs.
+->finally → always runs (cleanup code).
+->You can catch specific exceptions or use a general Exception.'''
