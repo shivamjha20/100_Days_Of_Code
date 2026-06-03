@@ -17,3 +17,13 @@ for i in range(5):
         break
 else:
     print("Loop finished without break.")  # skipped
+
+#Practical Use Case: Searching.
+numbers = [1, 3, 5, 7]
+
+for n in numbers:
+    if n == 4:
+        print("Found!")
+        break
+else:
+    print("Not found.")   # runs if loop ends without finding 4
