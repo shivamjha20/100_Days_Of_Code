@@ -33,3 +33,9 @@ try:
     result = square_root(-4)
 except NegativeNumberError as e:
     print("Custom Error:", e)
+
+'''Key Points
+->Use raise to trigger an exception.
+->Define custom exceptions by subclassing Exception.
+->Always provide a clear error message.
+->Handle them with try...except just like built-in errors.'''   
