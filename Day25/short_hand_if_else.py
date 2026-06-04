@@ -17,3 +17,10 @@ print(status)   # Adult
 score = 85
 grade = "A" if score >= 90 else "B" if score >= 75 else "C"
 print(grade)   # B
+
+''' Key points:
+->Shorthand if-else is great for simple conditions.
+->For complex logic, stick to regular if...else blocks for
+ readability.
+->You can use it inside assignments, function calls, or even
+ f-strings.'''
