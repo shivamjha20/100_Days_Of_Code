@@ -20,3 +20,8 @@ indexed_fruits = [(i, f) for i, f in enumerate(fruits)]
 print(indexed_fruits)
 
 
+
+'''Key Points
+enumerate() saves you from manually using range(len(...)).
+It's cleaner, more Pythonic, and avoids off-by-one errors.
+Often used in loops where both position and value matter.'''
