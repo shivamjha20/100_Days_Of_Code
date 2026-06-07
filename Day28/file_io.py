@@ -12,3 +12,4 @@ file = open("example.txt", "r")  # "r" = read mode
 with open("example.txt", "w") as f:
     f.write("Hello, world!\n")
     f.write("This is a second line.")
+#Using "with" ensures the file closes automatically.
