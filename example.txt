@@ -1,3 +1,4 @@
 Hello, world!
 This is a second line.
 This line was appended.
+This line was appended.
