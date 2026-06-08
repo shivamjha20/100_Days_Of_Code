@@ -15,3 +15,19 @@ with open("example.txt", "r") as f:
     f.read(5)
     print(f.tell())       # 5 (after reading 5 characters)
 
+'''seek(offset, whence):-
+Moves the file pointer to a specific position.
+Parameters:
+offset: number of bytes to move.
+whence: reference point (default = 0).
+0 → beginning of file
+1 → current position
+2 → end of file'''
+with open("example.txt", "r") as f:
+    f.seek(0)        # Move to start
+    print(f.read(5)) # Read first 5 chars
+
+    f.seek(0, 2)     # Move to end
+    print(f.tell())  # Position at end of file
+
+
