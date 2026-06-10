@@ -25,4 +25,11 @@ class Teacher(Person):
         self.subject = subject
     
     def assign_grade(self, student, course, grade):
-        print(f"{self.name} assigned grade {grade} to {student.name} in {course}")        
+        print(f"{self.name} assigned grade {grade} to {student.name} in {course}")  
+
+# Example usage
+student1 = Student("Alice", 20, "S101")
+teacher1 = Teacher("Mr. Sharma", 40, "Math")
+
+student1.enroll("Math")
+teacher1.assign_grade(student1, "Math", "A")              
