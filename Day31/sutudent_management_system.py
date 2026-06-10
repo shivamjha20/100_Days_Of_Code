@@ -17,3 +17,12 @@ class Student(Person):
     def enroll(self, course):
         self.courses.append(course)
         print(f"{self.name} enrolled in {course}")
+
+# Teacher class inherits from Person
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+    
+    def assign_grade(self, student, course, grade):
+        print(f"{self.name} assigned grade {grade} to {student.name} in {course}")        
