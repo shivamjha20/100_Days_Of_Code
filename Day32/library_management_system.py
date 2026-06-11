@@ -36,3 +36,29 @@ class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author                  
+
+# Library class
+class Library:
+    def __init__(self, name, fine_per_day=10):
+        self.name = name
+        self.books = []
+        self.fine_per_day = fine_per_day
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def lend_book(self, book, member, days):
+        if book in self.books:
+            self.books.remove(book)
+            return True
+        else:
+            print(f"Sorry, {book.title} is not available.")
+            return False
+
+    def receive_book(self, book):
+        self.books.append(book)
+
+    def show_books(self):
+        print(f"Books available in {self.name}:")
+        for b in self.books:
+            print(f"- {b.title} by {b.author}")
