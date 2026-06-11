@@ -29,4 +29,10 @@ class Member(Person):
             else:
                 print(f"{self.name} returned {book.title} on time.")
             library.receive_book(book)
-            del self.borrowed_books[book]        
+            del self.borrowed_books[book]  
+
+# Book class
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author                  
