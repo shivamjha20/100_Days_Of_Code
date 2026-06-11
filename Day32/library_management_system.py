@@ -62,3 +62,18 @@ class Library:
         print(f"Books available in {self.name}:")
         for b in self.books:
             print(f"- {b.title} by {b.author}")
+
+# Example usage
+library = Library("City Library", fine_per_day=20)
+
+book1 = Book("1984", "George Orwell")
+book2 = Book("The Alchemist", "Paulo Coelho")
+
+library.add_book(book1)
+library.add_book(book2)
+
+member1 = Member("Alice", "M101")
+
+library.show_books()
+member1.borrow_book(book1, library, days=5)   # borrow for 5 days
+member1.return_book(book1, library)           # return (fine if late)
