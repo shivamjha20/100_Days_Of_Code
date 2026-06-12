@@ -56,3 +56,20 @@ class Hotel:
                     return booking
         print("Room not available.")
         return None
+    
+# Example usage
+hotel = Hotel("Grand Palace")
+
+room1 = Room(101, "Single", 2000)
+room2 = Room(102, "Double", 3500)
+room3 = Room(103, "Suite", 6000)
+
+hotel.add_room(room1)
+hotel.add_room(room2)
+hotel.add_room(room3)
+
+guest1 = Guest("Alice", "G101")
+
+hotel.show_available_rooms()
+booking1 = hotel.book_room(guest1, 102, 3)   # Alice books room 102 for 3 nights
+hotel.show_available_rooms()
