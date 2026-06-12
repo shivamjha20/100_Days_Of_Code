@@ -30,4 +30,29 @@ class Booking:
         self.total_cost = room.price * nights
 
     def show_details(self):
-        print(f"Booking Details:\nGuest: {self.guest.name}\nRoom: {self.room.room_number} ({self.room.room_type})\nNights: {self.nights}\nTotal Cost: ₹{self.total_cost}")        
+        print(f"Booking Details:\nGuest: {self.guest.name}\nRoom: {self.room.room_number} ({self.room.room_type})\nNights: {self.nights}\nTotal Cost: ₹{self.total_cost}")
+        
+# Hotel class
+class Hotel:
+    def __init__(self, name):
+        self.name = name
+        self.rooms = []
+
+    def add_room(self, room):
+        self.rooms.append(room)
+
+    def show_available_rooms(self):
+        print(f"Available rooms in {self.name}:")
+        for room in self.rooms:
+            if not room.is_booked:
+                print(f"- Room {room.room_number} ({room.room_type}) ₹{room.price}")
+
+    def book_room(self, guest, room_number, nights):
+        for room in self.rooms:
+            if room.room_number == room_number and not room.is_booked:
+                if room.book():
+                    booking = Booking(guest, room, nights)
+                    booking.show_details()
+                    return booking
+        print("Room not available.")
+        return None
