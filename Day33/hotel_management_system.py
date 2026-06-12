@@ -15,3 +15,8 @@ class Room:
     def release(self):
         self.is_booked = False
 
+# Guest class
+class Guest:
+    def __init__(self, name, guest_id):
+        self.name = name
+        self.guest_id = guest_id
