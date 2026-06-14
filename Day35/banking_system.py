@@ -75,3 +75,77 @@ class Bank:
 
     def get_account(self, acc_number):
         return self.accounts.get(acc_number, None)
+    
+# Menu-driven program
+def main():
+    bank = Bank("MyBank")
+
+    while True:
+        print("\n--- Banking Menu ---")
+        print("1. Create Account")
+        print("2. Deposit")
+        print("3. Withdraw")
+        print("4. Show Balance")
+        print("5. Show Transactions")
+        print("6. Add Interest (Savings only)")
+        print("7. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            acc_number = input("Enter account number: ")
+            owner = input("Enter owner name: ")
+            acc_type = input("Enter account type (savings/current): ").lower()
+            bank.create_account(acc_number, owner, acc_type)
+
+        elif choice == "2":
+            acc_number = input("Enter account number: ")
+            account = bank.get_account(acc_number)
+            if account:
+                amount = int(input("Enter deposit amount: "))
+                account.deposit(amount)
+            else:
+                print("Account not found!")
+
+        elif choice == "3":
+            acc_number = input("Enter account number: ")
+            account = bank.get_account(acc_number)
+            if account:
+                amount = int(input("Enter withdrawal amount: "))
+                account.withdraw(amount)
+            else:
+                print("Account not found!")
+
+        elif choice == "4":
+            acc_number = input("Enter account number: ")
+            account = bank.get_account(acc_number)
+            if account:
+                account.show_balance()
+            else:
+                print("Account not found!")
+
+        elif choice == "5":
+            acc_number = input("Enter account number: ")
+            account = bank.get_account(acc_number)
+            if account:
+                account.show_transactions()
+            else:
+                print("Account not found!")
+
+        elif choice == "6":
+            acc_number = input("Enter account number: ")
+            account = bank.get_account(acc_number)
+            if isinstance(account, SavingsAccount):
+                account.add_interest()
+            else:
+                print("Interest can only be added to Savings Accounts.")
+
+        elif choice == "7":
+            print("Exiting... Thank you for banking with us!")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
