@@ -44,3 +44,17 @@ class SavingsAccount(Account):
         self.balance += interest
         self.transactions.append(f"Interest added ₹{interest:.2f}, Balance: ₹{self.balance:.2f}")
         print(f"Interest of ₹{interest:.2f} added. New balance: ₹{self.balance:.2f}")
+
+class CurrentAccount(Account):
+    def __init__(self, acc_number, owner, balance=0, overdraft_limit=10000):
+        super().__init__(acc_number, owner, balance)
+        self.overdraft_limit = overdraft_limit
+
+    def withdraw(self, amount):
+        if amount <= self.balance + self.overdraft_limit:
+            self.balance -= amount
+            self.transactions.append(f"Withdrew ₹{amount} (Overdraft allowed), Balance: ₹{self.balance}")
+            print(f"₹{amount} withdrawn. New balance: ₹{self.balance}")
+        else:
+            print("Withdrawal exceeds overdraft limit!")
+
