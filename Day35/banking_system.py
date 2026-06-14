@@ -58,3 +58,20 @@ class CurrentAccount(Account):
         else:
             print("Withdrawal exceeds overdraft limit!")
 
+class Bank:
+    def __init__(self, name):
+        self.name = name
+        self.accounts = {}
+
+    def create_account(self, acc_number, owner, acc_type="savings"):
+        if acc_number not in self.accounts:
+            if acc_type == "savings":
+                self.accounts[acc_number] = SavingsAccount(acc_number, owner)
+            elif acc_type == "current":
+                self.accounts[acc_number] = CurrentAccount(acc_number, owner)
+            print(f"{acc_type.capitalize()} Account {acc_number} created for {owner}.")
+        else:
+            print("Account number already exists!")
+
+    def get_account(self, acc_number):
+        return self.accounts.get(acc_number, None)
