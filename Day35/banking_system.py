@@ -26,3 +26,21 @@ class Account:
         print(f"Transaction history for Account {self.acc_number}:")
         for t in self.transactions:
             print("-", t)
+
+class SavingsAccount(Account):
+    def __init__(self, acc_number, owner, balance=0, min_balance=500, interest_rate=0.04):
+        super().__init__(acc_number, owner, balance)
+        self.min_balance = min_balance
+        self.interest_rate = interest_rate
+
+    def withdraw(self, amount):
+        if self.balance - amount >= self.min_balance:
+            super().withdraw(amount)
+        else:
+            print(f"Cannot withdraw ₹{amount}. Minimum balance of ₹{self.min_balance} must be maintained.")
+
+    def add_interest(self):
+        interest = self.balance * self.interest_rate
+        self.balance += interest
+        self.transactions.append(f"Interest added ₹{interest:.2f}, Balance: ₹{self.balance:.2f}")
+        print(f"Interest of ₹{interest:.2f} added. New balance: ₹{self.balance:.2f}")
