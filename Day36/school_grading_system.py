@@ -58,3 +58,30 @@ class ClassSection:
         print(f"Students in {self.section_name}:")
         for s in self.students:
             print(f"- {s.name} ({s.student_id})")
+
+
+class GradeBook:
+    def calculate_gpa(self, student):
+        if not student.grades:
+            return None
+        total = sum(student.grades.values())
+        gpa = total / len(student.grades)
+        return gpa
+
+    def generate_report_card(self, student):
+        print("\n--- Report Card ---")
+        print(f"Student: {student.name} ({student.student_id}) | Class: {student.class_section}")
+        print("Grades:")
+        if not student.grades:
+            print("No grades yet.")
+        else:
+            for course, grade in student.grades.items():
+                print(f"- {course}: {grade}")
+            gpa = self.calculate_gpa(student)
+            print(f"GPA: {gpa:.2f}")
+        print("-------------------\n")
+
+    def generate_class_report(self, class_section):
+        print(f"\n=== Report Cards for {class_section.section_name} ===")
+        for student in class_section.students:
+            self.generate_report_card(student)
