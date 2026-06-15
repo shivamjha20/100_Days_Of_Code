@@ -43,3 +43,18 @@ class Course:
         print(f"Students in {self.course_name}:")
         for s in self.students:
             print(f"- {s.name} ({s.student_id})")
+
+class ClassSection:
+    def __init__(self, section_name):
+        self.section_name = section_name
+        self.students = []
+
+    def add_student(self, student):
+        student.class_section = self.section_name
+        self.students.append(student)
+        print(f"{student.name} assigned to {self.section_name}")
+
+    def show_students(self):
+        print(f"Students in {self.section_name}:")
+        for s in self.students:
+            print(f"- {s.name} ({s.student_id})")
