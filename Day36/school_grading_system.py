@@ -30,3 +30,16 @@ class Teacher(Person):
     def assign_grade(self, student, course, grade):
         student.grades[course.course_name] = grade
         print(f"{self.name} assigned {grade} to {student.name} in {course.course_name}")
+
+class Course:
+    def __init__(self, course_name):
+        self.course_name = course_name
+        self.students = []
+
+    def add_student(self, student):
+        self.students.append(student)
+
+    def show_students(self):
+        print(f"Students in {self.course_name}:")
+        for s in self.students:
+            print(f"- {s.name} ({s.student_id})")
