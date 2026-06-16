@@ -11,3 +11,10 @@ class Driver(Person):
 
     def toggle_availability(self):
         self.available = not self.available
+
+class Passenger(Person):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def request_ride(self, app, distance):
+        app.book_ride(self, distance)
