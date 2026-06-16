@@ -69,3 +69,49 @@ class RideSharingApp:
         for i, ride in enumerate(self.ride_history, start=1):
             print(f"{i}. Passenger: {ride.passenger.name}, Driver: {ride.driver.name}, Distance: {ride.distance} km, Fare: ₹{ride.fare}")
         print("====================\n")
+
+# Menu-driven program
+def main():
+    app = RideSharingApp("QuickRide")
+
+    while True:
+        print("\n--- Ride-Booking Menu ---")
+        print("1. Add Driver")
+        print("2. Add Passenger")
+        print("3. Book Ride")
+        print("4. Show Ride History")
+        print("5. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            name = input("Enter driver name: ")
+            vehicle = input("Enter vehicle details: ")
+            rate = int(input("Enter rate per km: "))
+            app.add_driver(Driver(name, vehicle, rate))
+
+        elif choice == "2":
+            name = input("Enter passenger name: ")
+            app.add_passenger(Passenger(name))
+
+        elif choice == "3":
+            passenger_name = input("Enter passenger name: ")
+            distance = int(input("Enter distance (km): "))
+            passenger = next((p for p in app.passengers if p.name == passenger_name), None)
+            if passenger:
+                passenger.request_ride(app, distance)
+            else:
+                print("Passenger not found!")
+
+        elif choice == "4":
+            app.show_ride_history()
+
+        elif choice == "5":
+            print("Exiting... Thank you for using QuickRide!")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
