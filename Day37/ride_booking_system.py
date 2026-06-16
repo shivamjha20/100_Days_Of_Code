@@ -18,3 +18,10 @@ class Passenger(Person):
 
     def request_ride(self, app, distance):
         app.book_ride(self, distance)
+
+class Ride:
+    def __init__(self, passenger, driver, distance):
+        self.passenger = passenger
+        self.driver = driver
+        self.distance = distance
+        self.fare = driver.rate_per_km * distance
