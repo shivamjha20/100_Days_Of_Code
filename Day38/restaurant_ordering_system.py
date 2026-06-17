@@ -63,3 +63,71 @@ class Restaurant:
         order = Order(customer_name, table_number)
         self.orders.append(order)
         return order
+    
+    
+# Menu-driven program
+def main():
+    restaurant = Restaurant("Foodie's Hub", total_tables=5)
+
+    while True:
+        print("\n--- Restaurant Menu ---")
+        print("1. Add Menu Item")
+        print("2. Show Menu")
+        print("3. Reserve Table")
+        print("4. Create Order")
+        print("5. Add Item to Order")
+        print("6. Show Receipt")
+        print("7. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            name = input("Enter item name: ")
+            price = int(input("Enter item price: "))
+            restaurant.add_menu_item(MenuItem(name, price))
+
+        elif choice == "2":
+            restaurant.show_menu()
+
+        elif choice == "3":
+            customer_name = input("Enter customer name: ")
+            table_number = int(input("Enter table number: "))
+            restaurant.reserve_table(customer_name, table_number)
+
+        elif choice == "4":
+            customer_name = input("Enter customer name: ")
+            order = restaurant.create_order(customer_name)
+            print(f"Order created for {customer_name}.")
+
+        elif choice == "5":
+            customer_name = input("Enter customer name: ")
+            order = next((o for o in restaurant.orders if o.customer_name == customer_name), None)
+            if order:
+                restaurant.show_menu()
+                index = int(input("Enter menu item number: ")) - 1
+                if 0 <= index < len(restaurant.menu):
+                    order.add_item(restaurant.menu[index])
+                else:
+                    print("Invalid choice.")
+            else:
+                print("Order not found.")
+
+        elif choice == "6":
+            customer_name = input("Enter customer name: ")
+            order = next((o for o in restaurant.orders if o.customer_name == customer_name), None)
+            if order:
+                tax_rate = float(input("Enter GST rate (e.g., 0.05 for 5%): "))
+                discount = float(input("Enter discount amount: "))
+                order.show_receipt(tax_rate, discount)
+            else:
+                print("Order not found.")
+
+        elif choice == "7":
+            print("Exiting... Thank you for visiting Foodie's Hub!")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
