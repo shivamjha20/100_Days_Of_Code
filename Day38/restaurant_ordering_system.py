@@ -31,3 +31,35 @@ class Order:
         print(f"Discount: ₹{discount:.2f}")
         print(f"Total Bill: ₹{total:.2f}")
         print("-------------------------------\n")
+
+class Restaurant:
+    def __init__(self, name, total_tables=10):
+        self.name = name
+        self.menu = []
+        self.orders = []
+        self.reserved_tables = {}
+        self.total_tables = total_tables
+
+    def add_menu_item(self, item):
+        self.menu.append(item)
+        print(f"{item.name} added to menu.")
+
+    def show_menu(self):
+        print(f"\n--- {self.name} Menu ---")
+        for i, item in enumerate(self.menu, start=1):
+            print(f"{i}. {item.name} - ₹{item.price}")
+
+    def reserve_table(self, customer_name, table_number):
+        if table_number in self.reserved_tables:
+            print(f"Table {table_number} is already reserved.")
+        elif table_number > self.total_tables or table_number < 1:
+            print("Invalid table number.")
+        else:
+            self.reserved_tables[table_number] = customer_name
+            print(f"Table {table_number} reserved for {customer_name}.")
+
+    def create_order(self, customer_name):
+        table_number = next((t for t, c in self.reserved_tables.items() if c == customer_name), None)
+        order = Order(customer_name, table_number)
+        self.orders.append(order)
+        return order
