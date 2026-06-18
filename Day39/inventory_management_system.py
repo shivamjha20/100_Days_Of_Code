@@ -42,3 +42,68 @@ class Sale:
             print(f"Sold {self.quantity} of {self.product.name}. Total: ₹{self.total}")
         else:
             print("Not enough stock!")
+
+class InventorySystem:
+    def __init__(self):
+        self.inventory = Inventory()
+        self.sales = []
+
+    def run(self):
+        while True:
+            print("\n--- Inventory Management Menu ---")
+            print("1. Add Product")
+            print("2. Show Inventory")
+            print("3. Update Stock")
+            print("4. Process Sale")
+            print("5. Show Sales Report")
+            print("6. Exit")
+
+            choice = input("Enter choice: ")
+
+            if choice == "1":
+                product_id = input("Enter product ID: ")
+                name = input("Enter product name: ")
+                price = int(input("Enter product price: "))
+                quantity = int(input("Enter product quantity: "))
+                product = Product(product_id, name, price, quantity)
+                self.inventory.add_product(product)
+
+            elif choice == "2":
+                self.inventory.show_inventory()
+
+            elif choice == "3":
+                product_id = input("Enter product ID: ")
+                quantity = int(input("Enter quantity to add: "))
+                self.inventory.update_stock(product_id, quantity)
+
+            elif choice == "4":
+                product_id = input("Enter product ID: ")
+                quantity = int(input("Enter quantity to sell: "))
+                if product_id in self.inventory.products:
+                    product = self.inventory.products[product_id]
+                    sale = Sale(product, quantity)
+                    sale.process_sale()
+                    self.sales.append(sale)
+                else:
+                    print("Product not found.")
+
+            elif choice == "5":
+                if not self.sales:
+                    print("No sales recorded yet.")
+                else:
+                    print("\n--- Sales Report ---")
+                    for i, sale in enumerate(self.sales, start=1):
+                        print(f"{i}. {sale.product.name} | Qty: {sale.quantity} | Total: ₹{sale.total}")
+                    total_revenue = sum(s.total for s in self.sales)
+                    print(f"Total Revenue: ₹{total_revenue}")
+
+            elif choice == "6":
+                print("Exiting... Goodbye!")
+                break
+
+            else:
+                print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    system = InventorySystem()
+    system.run()
