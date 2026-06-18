@@ -29,3 +29,16 @@ class Inventory:
             print("No products available.")
         for product in self.products.values():
             print(product)
+
+class Sale:
+    def __init__(self, product, quantity):
+        self.product = product
+        self.quantity = quantity
+        self.total = product.price * quantity
+
+    def process_sale(self):
+        if self.product.quantity >= self.quantity:
+            self.product.quantity -= self.quantity
+            print(f"Sold {self.quantity} of {self.product.name}. Total: ₹{self.total}")
+        else:
+            print("Not enough stock!")
